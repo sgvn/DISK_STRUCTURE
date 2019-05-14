@@ -20,7 +20,7 @@ import re
 
 #-- FUNCTION 1: create a list of species computed.
 def X():
-    files = [f for f in os.listdir('cross-sections_diss/')]
+    files = [f for f in os.listdir('cross-sections_diss/') if re.findall('.txt', f)]
     X = [re.sub('.txt', '', fname) for fname in files]
 
     return X
@@ -57,8 +57,14 @@ if __name__ == "__main__":
         dlambda = (flux_isrf['wv'][11] - flux_isrf['wv'][10]) #Since dlambda is constant we use arbitrary rows to compute it (here 11 and 10).
         #------------------------------------------------
 
+        #-----Make sure we have the same size and first value of wavelength in both flux and cross-sections-----
+        start = cross_sections['wv'].iloc[0]
+        #print(start)
+        flux_isrf = flux_isrf[flux_isrf.wv >= start]
+        #-------------------------------------------------------------------------------------------------------
+
         #-----multiply cross-section table with the flux and sum-----
-        product=cross_sections['diss']*flux_isrf['flux']*dlambda ###!!!!!!!!!!!!!!!!WARNING: make sure to start the at the right wv, the one of the cs!!!!
+        product=cross_sections['diss']*flux_isrf['flux']*dlambda
         product_filtered = product.dropna()                     ####!!!! we will get the wavelength at which the cs table starts, then we cut everything below that wv in the flux table. easy
         summed = product.sum()
         list_photorates.append(summed)
@@ -66,8 +72,8 @@ if __name__ == "__main__":
 
     #-----create photorates.in file-----
     photorates = pd.Series(list_photorates)
-    spe = pd.Series(X) # chien 
+    spe = pd.Series(X)
     photorates_table = pd.concat([spe, photorates], axis=1)
-    print(photorates_table.values)
+    #print(photorates_table.values)
     np.savetxt('photorates.in', photorates_table.values, fmt='%-11s %.6e', newline='\n', header=head, comments='#', encoding=None)    
     #-----------------------------------
