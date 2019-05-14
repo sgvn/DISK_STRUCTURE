@@ -69,10 +69,6 @@ if __name__ == "__main__":
     spe = pd.Series(X)
     photorates_table = pd.concat([spe, photorates], axis=1)
     print(photorates_table.values)
-    #print("%s\t\t%.5e" % (species, photorates))
-
-    #to convert a dataframe to numpy, use this: df.values 88888!!!!!!
     np.savetxt('photorates.in', photorates_table.values, fmt='%-11s %.6e', newline='\n', header=head, comments='#', encoding=None)    
-    #photorates_table.to_csv('photorates.in', sep='\t', float_format='%.5e', header=False, index=False)
     #-----------------------------------
 
