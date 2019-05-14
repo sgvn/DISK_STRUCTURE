@@ -1,0 +1,7 @@
+# H3+ cross sections
+# #photoabsorption   -- Photoabsorption cross section (cm2)
+# #photodissociation -- Photodissociation cross section (cm2)
+# #photoionisation   -- Photoionisation cross section (cm2)
+# #This version has been resampled to a uniform 0.1nm grid while maintaining a constant integrated cross section (using trapezoidal integration).
+# #wavelength photoabsorption photodissociation photoionisation
+9.120000e+01 0.000000e+00 0.000000e+00 0.000000e+00

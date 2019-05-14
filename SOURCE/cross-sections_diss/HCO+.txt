@@ -1,0 +1,13 @@
+# HCO+ cross sections
+# #photoabsorption   -- Photoabsorption cross section (cm2)
+# #photodissociation -- Photodissociation cross section (cm2)
+# #photoionisation   -- Photoionisation cross section (cm2)
+# #This version has been resampled to a uniform 0.1nm grid while maintaining a constant integrated cross section (using trapezoidal integration).
+# #wavelength photoabsorption photodissociation photoionisation
+1.029000e+02 0.000000e+00 0.000000e+00 0.000000e+00
+1.039000e+02 1.747762e-23 1.747762e-23 0.000000e+00
+1.049000e+02 1.246425e-19 1.246425e-19 0.000000e+00
+1.059000e+02 3.472244e-18 3.472244e-18 0.000000e+00
+1.069000e+02 3.778455e-19 3.778455e-19 0.000000e+00
+1.079000e+02 1.606121e-22 1.606121e-22 0.000000e+00
+1.089000e+02 2.666873e-28 2.666873e-28 0.000000e+00

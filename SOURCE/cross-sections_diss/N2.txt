@@ -1,0 +1,15 @@
+# N2 cross sections
+# #photoabsorption   -- Photoabsorption cross section (cm2)
+# #photodissociation -- Photodissociation cross section (cm2)
+# #photoionisation   -- Photoionisation cross section (cm2)
+# #This version has been resampled to a uniform 0.1nm grid while maintaining a constant integrated cross section (using trapezoidal integration).
+# #wavelength photoabsorption photodissociation photoionisation
+9.120000e+01 3.726182e-17 3.726182e-17 0.000000e+00
+9.220000e+01 1.740466e-17 1.740466e-17 0.000000e+00
+9.320000e+01 4.050134e-18 4.050134e-18 0.000000e+00
+9.420000e+01 6.061121e-17 6.061121e-17 0.000000e+00
+9.520000e+01 1.059361e-19 1.059361e-19 0.000000e+00
+9.620000e+01 7.584323e-18 7.356457e-18 0.000000e+00
+9.720000e+01 1.522765e-16 1.522956e-16 0.000000e+00
+9.820000e+01 6.747938e-20 6.747938e-20 0.000000e+00
+9.920000e+01 1.028937e-17 1.028508e-17 0.000000e+00

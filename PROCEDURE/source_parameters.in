@@ -1,0 +1,53 @@
+################################################################################################################
+# Input parameter file. These are the parameters of the computed source. 
+# used by disk_structure.py
+# source: FlyingSaucer1 2019-04-01
+
+################################################################################################################
+#                                             disk physical structure                                          #
+################################################################################################################
+star_mass                   0.579863    # mass of the central star in Solar mass
+ref_radius                  1.000e+02   # reference radius for parametric laws
+cut_radius					2.000e+02   # tapered edge radius							(au)
+inner_radius				1.000e+00   # inner radius								(au)
+outer_radius				3.000e+02   # outer radius								(au)
+Tmidplan_ref                1.000e+01   # mid-plan temperature at the reference radius
+Tatmos_ref                  5.000e+01   # atmospheric temperature at the reference radius (where z=4H)
+q_exp                       4.000e-01   # exponent for the radial variation of temperature (Origin?)
+sigma_T                     2.000e+00   # stiffness of the vertical temperature profile
+nb_points                   6.400e+01   # number of vertical points. Same for every radii.
+
+################################################################################################################
+#                                                      GAS                                                     #
+################################################################################################################
+surface_density_ref         3.350e-01   # surface density of H2 at the reference radius in g.cm-2
+p_exp                       1.500e+00   # surface density exponent
+nH_to_AV_conversion         1.600e+21   # conversion factor of H colmun density to Av (Wagenblast \& Hartquist 1989)
+initial_He                  9.000e-02   # Ab of Helium used in the model -> remove He from dtogm 
+
+################################################################################################################
+#                                                    UV FLUX                                                   #
+################################################################################################################
+uv_ref                      4.100e+02   # total UV field from the central star at the reference radius
+
+################################################################################################################
+#                                           DUST SIZES AND DISTRIBUTION                                        #
+################################################################################################################
+small_grains                1.000e-05   # radius of small grains when the sizes are read in the 1D_static.dat (read only if only one grain size!)
+big_grains                  1.000e-05   # radius of big grains when the sizes are read in the 1D_static.dat (read only if only one grain size!)
+dtogas_up                   1.000e-02   # dust to gas mass ratio in the upper part (usefull only if one grain size!)
+dtogas_in					1.000e-02	# dust to gas ratio below the tapered edge radius
+dtogas_out                  1.000e-03   # dust to gas ratio beyond the tapered edge radius
+gamma_exp					2.000e-01	# surface density exponent for big grains
+transition_altitude         0.000e+00   # altitude where small grains become big  (usefull only if one grain size!)
+rho_m						3.000e+00	# material density of the grains				(g.cm-3)
+d_exp						3.500e+00	# size distribution exponent !!!don't type 4!!!
+schmidt_number				1.000e+00	# Schmidt number. See documentation.  
+alpha 						1.000e-02	# viscosity coefficient.
+s_x							9.000e-01	# settling factor. See documentation. 
+q_c							8.000e+00	# extinction efficiency at resonance.
+settling					1.000e+00   # whether yes or no you want dust settling. 1="settling", 0="no settling"
+a_min                       5.000e-07   # minimal grain size. (cm)   
+a_max                       2.240e-04   # max grain size. (cm)
+nb_sizes                    8.000e+00   # number of intervals i.e. the number of grain sizes needed between a_min and a_max
+cutoff  					1.000e+00   # whether yes or no you want a cutoff at cut radius. 1="cutoff", 0="no cutoff"

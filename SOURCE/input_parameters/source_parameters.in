@@ -1,0 +1,52 @@
+################################################################################################################
+# Input parameter file. These are the parameters of the computed source. 
+# used by disk_structure.py
+# source: SOURCE_NAMENUMBER DATE
+
+################################################################################################################
+#                                             disk physical structure                                          #
+################################################################################################################
+star_mass                   Star_mass    # mass of the central star in Solar mass
+ref_radius                  Ref_radius   # reference radius for parametric laws
+cut_radius					Cut_radius   # tapered edge radius							(au)
+inner_radius				Inner_radius   # inner radius								(au)
+outer_radius				Outer_radius   # outer radius								(au)
+Tmidplan_ref                Tmid_ref   # mid-plan temperature at the reference radius
+Tatmos_ref                  Tatm_ref   # atmospheric temperature at the reference radius (where z=4H)
+q_exp                       Q_exp   # exponent for the radial variation of temperature (Origin?)
+sigma_T                     Sigma_T   # stiffness of the vertical temperature profile
+nb_points                   Nb_points   # number of vertical points. Same for every radii.
+
+################################################################################################################
+#                                                      GAS                                                     #
+################################################################################################################
+surface_density_ref         Surface_density_ref   # surface density of H2 at the reference radius in g.cm-2
+p_exp                       P_exp   # surface density exponent
+nH_to_AV_conversion         NH_to_AV_conversion   # onversion factor of H colmun density to Av (Wagenblast \& Hartquist 1989)
+initial_He                  Initial_He   # Ab of Helium used in the model -> remove He from dtogm 
+
+################################################################################################################
+#                                                    UV FLUX                                                   #
+################################################################################################################
+uv_ref                      Uv_ref   # total UV field from the central star at the reference radius
+
+################################################################################################################
+#                                           DUST SIZES AND DISTRIBUTION                                        #
+################################################################################################################
+small_grains                Small_grains   # radius of small grains when the sizes are read in the 1D_static.dat (read only if only one grain size!)
+big_grains                  Big_grains   # radius of big grains when the sizes are read in the 1D_static.dat (read only if only one grain size!)
+dtogas_up                   Dtogas_up   # dust to gas mass ratio in the upper part (usefull only if one grain size!)
+dtogas_in					Dtogas_in	# dust to gas ratio below the tapered edge radius
+gamma_exp					Gamma_exp	# surface density exponent for big grains
+transition_altitude         Transition_altitude   # altitude where small grains become big  (usefull only if one grain size!)
+rho_m						Rho_m	# material density of the grains				(g.cm-3)
+d_exp						D_exp	# size distribution exponent !!!don't type 4!!!
+schmidt_number				Schmidt_number	# Schmidt number. See documentation.  
+alpha 						Alpha	# viscosity coefficient.
+s_x							S_x	# settling factor. See documentation. 
+q_c							Q_c	# extinction efficiency at resonance.
+settling					Settling   # whether yes or no you want dust settling. 1="settling", 0="no settling"
+a_min                       A_min   # minimal grain size. (cm)   
+a_max                       A_max   # max grain size. (cm)
+nb_sizes                    Nb_sizes   # number of intervals i.e. the number of grain sizes needed between a_min and a_max
+cutoff  					Cutoff   # whether yes or no you want a cutoff at cut radius. 1="cutoff", 0="no cutoff"
