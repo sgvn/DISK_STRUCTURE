@@ -66,9 +66,8 @@ if __name__ == "__main__":
 
     #-----create photorates.in file-----
     photorates = pd.Series(list_photorates)
-    spe = pd.Series(X)
+    spe = pd.Series(X) # chien 
     photorates_table = pd.concat([spe, photorates], axis=1)
     print(photorates_table.values)
     np.savetxt('photorates.in', photorates_table.values, fmt='%-11s %.6e', newline='\n', header=head, comments='#', encoding=None)    
     #-----------------------------------
-
