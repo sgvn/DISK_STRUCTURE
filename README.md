@@ -1,1 +1,1 @@
-# DISK_STRUCTURE
+# 2D Protoplanetary Disk Physical Structure
